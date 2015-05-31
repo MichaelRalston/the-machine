@@ -66,7 +66,7 @@ function buildVotals(players, voteList, resetList) { // [Name] -> [(Voter, Votee
   var votal = {absent: livelist.slice()};
   var j = 0;
   var result = [];
-  for (var i = 0; i < voteList.length; i++) {
+  for (var i = 0; i < voteList.length; ++i) {
     while (j < resetList.length && resetList[j][0]-voteList[i][2] <= 0) {
       livelist = livelist.filter(function(name) { return resetList[j][1].indexOf(name) < 0; });
       ++j;
